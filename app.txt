@@ -1,0 +1,2 @@
+My first CI/CD application
+Version 1.0

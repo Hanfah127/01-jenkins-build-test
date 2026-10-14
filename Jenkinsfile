@@ -6,14 +6,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building my application'
-                bat 'type app.txt'
+                sh 'cat app.txt'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Testing my application'
-                bat 'if exist app.txt (echo TEST PASSED) else (exit /b 1)'
+                sh 'grep -q "My first CI/CD application" app.txt'
+                echo 'TEST PASSED'
             }
         }
     }

@@ -1,1 +1,2 @@
-This text does not match the expected application text.
+My first CI/CD application
+Version 1.0
